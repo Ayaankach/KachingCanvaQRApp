@@ -37,7 +37,7 @@ The `.env` file of the app is configured as follows:
 ```bash
 CANVA_FRONTEND_PORT=8080
 CANVA_BACKEND_PORT=3001
-CANVA_BACKEND_HOST=http://localhost:3001 # TODO: replace this with your production URL before submitting your app
+CANVA_BACKEND_HOST=http://localhost:3001 # TODO: replace this our production URL 
 CANVA_APP_ID=AAFwT19fspQ 
 CANVA_HMR_ENABLED=TRUE 
 ```
