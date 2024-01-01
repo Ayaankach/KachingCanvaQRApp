@@ -1,32 +1,57 @@
 # Kaching Canva QR Code App 
 
-Welcome to the **Kaching QR Code App** developed for Canva platform. 🎉
+## Overview
 
-The canva documentation for the platform is at [canva.dev/docs/apps](https://www.canva.dev/docs/apps/).
+This repository contains the source code for a Canva application developed in TypeScript. The application is designed to create **QR Code** for kaching on the Canva platform.
 
-## Requirements
+## Deployment
 
+To deploy this Canva application for production, follow the steps outlined below:
+
+### Prerequisites
+
+Make sure you have the following prerequisites installed and configured:
+
+- Node.js and npm: [Node.js](https://nodejs.org/)
+- TypeScript: Install TypeScript globally using npm with the command `npm install -g typescript`
 - Node.js `v18`
 - npm `v9`
 
 **Note:** To make sure you're running the correct version of Node.js, we recommend using a version manager, such as [nvm](https://github.com/nvm-sh/nvm#intro). The .nvmrc file in the root directory of this repo will ensure the correct version is used.
 
-## Host the Canva App on the kaching sub domain
+### Installation
 
-### Info
+1. Clone the repository:
 
-The `src` directory contains the boilerplate of the app written in typescript.
+   ```bash
+   git clone https://github.com/your-username/canva-application.git
+   ```
 
-The server frontend is exposed on port 8080 and the backend runs on ports 3001 development url upon runnig the server is http://localhost:3001.
+2. Navigate to the project directory:
 
-The app's source code is in the `src/app.tsx` file.
+   ```bash
+   cd canva-application
+   ```
 
-### Preview the app
+3. Install dependencies:
 
-The local development server only exposes a JavaScript bundle, so you can't preview an app by visiting http://localhost:8080. The app can only be previewed via the Canva editor.
+   ```bash
+   npm install
+   ```
 
+### Configuration
 
-### Hosting and exposing the server
+[Include any configuration steps or environment variables that need to be set up.]
+
+### Build
+
+Build the TypeScript code:
+
+```bash
+npm run build
+```
+
+### Deployment to Production
 
 By default, every time you make a change to an app, you have to reload the entire app to see the results of those changes. If you enable [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) (HMR), changes will be reflected without a full reload, which significantly speeds up the development loop.
 
@@ -45,35 +70,9 @@ The `.env` file of the app is:
    ```
 I need the production URL to be changed before exposing the sever to the public domain
 
-### Backend
-
 The backend is defined in the  `backend/server.ts` file, automatically starts when the `npm start` command is run, and becomes available at http://localhost:3001.
 
-To run examples that have a backend:
-
-1. Navigate to the [Your apps](https://www.canva.com/developers/apps) page.
-2. Copy the ID of an app from the **App ID** column.
-3. In the starter kit's `.env` file, set `CANVA_APP_ID` to the ID of the app.
-
-   For example:
-
-   ```bash
-   CANVA_APP_ID=AABBccddeeff
-   CANVA_BACKEND_PORT=3001
-   CANVA_FRONTEND_PORT=8080
-   CANVA_BACKEND_HOST=http://localhost:3001
-   CANVA_HMR_ENABLED=TRUE
-   ```
-
-4. Start the example:
-
-   ```bash
-   npm start fetch
-   ```
-
 The ID of the app must be explicitly defined because it's required to [send and verify HTTP requests](https://www.canva.dev/docs/apps/verifying-http-requests/). If you don't set up the ID in the `.env` file, an error will be thrown when attempting to run the example.
-
-## Customizing the backend host
 
 If your app has a backend, the URL of the server likely depends on whether it's a development or production build. For example, during development, the backend is probably running on a localhost URL, but once the app's in production, the backend needs to be exposed to the internet.
 
@@ -90,3 +89,42 @@ To more easily customize the URL of the server:
    **Note:** `BACKEND_HOST` is a global constant that contains the value of the `CANVA_BACKEND_HOST` environment variable. The variable is made available to the app via webpack and does not need to be imported.
 
 4. Before bundling the app for production, update `CANVA_BACKEND_HOST` to point to the production backend.
+
+[Include steps or scripts for deploying the application to production. If it needs to be hosted on an existing domain, provide information on how to configure the domain settings.]
+
+### Usage
+
+The `src` directory contains the boilerplate of the app written in typescript.
+
+The server frontend is exposed on port 8080 and the backend runs on ports 3001 development url upon runnig the server is http://localhost:3001.
+
+The app's source code is in the `src/app.tsx` file.
+
+The local development server only exposes a JavaScript bundle, so you can't preview an app by visiting http://localhost:8080. The app can only be previewed via the Canva editor.
+
+## Contributing
+
+If you would like to contribute to the development of this Canva application, please follow the guidelines outlined in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+This Canva application is licensed under the [LICENSE](LICENSE) - [Specify the license type].
+
+## Acknowledgments
+
+[Include any acknowledgments or credits for third-party libraries, resources, or inspiration.]
+
+## Contact
+
+For any questions or concerns, feel free to reach out to [Your Name] at [your.email@example.com].
+
+Happy coding!
+
+
+
+
+
+
+
+
+
